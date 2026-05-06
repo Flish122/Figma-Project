@@ -1,95 +1,128 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
+    color: #111;
 }
 
 :root {
     --bg-color: #4694dc;
-    --text-color: #fff;
-    --text-dr-color:#111;
+    --text-white: #fff;
     --text-gray: #9CA3AF;
 }
 
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 156px;
+}
 
 .header {
     background-color: var(--bg-color);
-    min-height: 500px;
-    padding-top:82px;
-    padding-bottom:82px;
-    color: var(--text-color);
-
-    .header__container {
-        max-width: 1440px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 156px;
-
-        .header__title {
-            font-size: 56px;
-            font-weight: 600;
-            margin-bottom: 38px;
-        }
-
-        .header__desc {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            max-width: 437px;
-            margin-bottom: 45px;
-        }
-        .header__btn {
-            width: 194px;
-            height: 60px;
-            color: var(--text-dr-color);
-            background-color: var(--text-color);
-            font-size: 16px;
-            font-weight: 400;
-            border: none;
-        }
-    }
-    @media (max-width: 768px) {
-        .header__container {
-            padding: 0 15px;
-        }
-    }
-    @media (max-width: 400px) {
-        .header__title {
-            font-size: 36px;
-        }
-    }
+    padding: 82px 0;
+    color: var(--text-white);
 }
 
-.services {
+.header__title {
+    font-size: 56px;
+    margin-bottom: 38px;
+}
 
-    .services__container {
+.header__desc {
+    max-width: 437px;
+    line-height: 24px;
+    margin-bottom: 45px;
+}
 
-        .container__block {
-            text-align: center;
-            margin-bottom: 50px;
+.header__btn {
+    width: 194px;
+    height: 60px;
+    background: var(--text-white);
+    border: none;
+    cursor: pointer;
+}
 
-            .block__title{
-                font-weight: 600;
-                font-size: 16px;
-                text-transform: uppercase;
-                letter-spacing: 3.3px;
-                margin-bottom: 15px;
-            }
+.block {
+    text-align: center;
+    margin-bottom: 80px;
+}
 
-            .block__desc {
-                font-size: 16px;
-                letter-spacing: 2px;
-                line-height: 24px;
-                font-weight: 400;
-                color: var(--text-gray);
-                max-width: 465px;
-                margin: 0 auto;
-            }
-        }
+.block__title {
+    text-transform: uppercase;
+    letter-spacing: 3.3px;
+    margin-bottom: 20px;
+}
+
+.block__desc {
+    max-width: 465px;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+
+.services { padding: 80px 0; }
+
+.services__items {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.services__item {
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.team { padding-bottom: 100px; }
+
+.team__items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    display: flex;
+    align-items: center; /
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 11px;
+    box-shadow: 0 4px 50px rgba(0,0,0,0.06);
+    width: 280px;
+    min-height: 80px;
+}
+
+.team__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.team__name { font-size: 14px; margin-bottom: 4px; }
+
+.team__role {
+    font-size: 11px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .container { padding: 0 20px; }
+    .services__items, .team__items { flex-direction: column; align-items: center; }
+}
+@media (max-width: 1366px) {
+    .team .container {
+        padding: 0 15px;
     }
 }
-git remote add origin https://github.com/Flish122/Figma-Project.git
